@@ -66,7 +66,7 @@ def run_app(level_name, dataset_url, unique_key):
             combined_audio = BytesIO()
 
             for row in data.itertuples():
-                text = f"Number {row.SID}, {row.WORD}"  # Example: "Number 1, specialize"
+                text = f"{row.SID}, {row.WORD}"  # Example: "Number 1, specialize"
                 tts = gTTS(text, lang='en')
                 tts_audio = BytesIO()
                 tts.write_to_fp(tts_audio)
